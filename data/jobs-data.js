@@ -1,5 +1,5 @@
 window.JOBS_DATA = {
-    "updated":  "2026-09-15T12:43:54Z",
+    "updated":  "2026-09-15T14:21:17Z",
     "items":  [
                   {
                       "title":  "Software Engineer, Kenya",
@@ -60,6 +60,146 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "Varies by role",
                       "url":  "https://www.brightermonday.co.ke/jobs"
+                  },
+                  {
+                      "title":  "AI Data Annotation \u0026 Training Tasks",
+                      "provider":  "Sama",
+                      "location":  "Kenya",
+                      "place":  "Nairobi, Kenya + remote",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling",
+                      "url":  "https://www.sama.com/careers"
+                  },
+                  {
+                      "title":  "AI Training Data \u0026 Crowd Tasks",
+                      "provider":  "Appen",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling",
+                      "url":  "https://appen.com/careers/"
+                  },
+                  {
+                      "title":  "AI Data Labeling \u0026 Evaluation Tasks",
+                      "provider":  "Toloka",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling",
+                      "url":  "https://toloka.ai/"
+                  },
+                  {
+                      "title":  "Online Microtasks \u0026 AI Data Work",
+                      "provider":  "Clickworker",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling",
+                      "url":  "https://www.clickworker.com/"
+                  },
+                  {
+                      "title":  "3000 Vacancies Open At Mombasa County Public Service Board",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/3000-vacancies-open-at-mombasa-county-public-service-board-2/"
+                  },
+                  {
+                      "title":  "TNHC Hiring Assistant Director",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/tnhc-hiring-assistant-director/"
+                  },
+                  {
+                      "title":  "Declaration Of Employment Opportunities At Laikipia University",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/declaration-of-employment-opportunities-at-laikipia-university/"
+                  },
+                  {
+                      "title":  "MKU Hiring Chief Security Officer",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/mku-hiring-chief-security-officer/"
+                  },
+                  {
+                      "title":  "5 Vacancies Open At Sports Kenya",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Kenya",
+                      "place":  "Kenya",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/5-vacancies-open-at-sports-kenya/"
+                  },
+                  {
+                      "title":  "5 Vacancies Open At NAMICO",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/5-vacancies-open-at-namico/"
+                  },
+                  {
+                      "title":  "3 Vacant Open At ELDOWAS",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/15/3-vacant-open-at-eldowas/"
+                  },
+                  {
+                      "title":  "Jubilee Insurance Hiring Sales Intern",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/14/jubilee-insurance-hiring-sales-intern-13/"
+                  },
+                  {
+                      "title":  "KEMRI Hiring Administrative Interns (3 Posts) – Kisumu",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/14/kemri-hiring-administrative-interns-3-posts-kisumu/"
+                  },
+                  {
+                      "title":  "10 Vacancies Open At UNEP",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "Rolling / see posting",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/09/07/10-vacancies-open-at-unep-5/"
                   },
                   {
                       "title":  "Remote Office Assistant",
@@ -132,16 +272,6 @@ window.JOBS_DATA = {
                       "url":  "https://remotive.com/remote-jobs/software-development/senior-react-full-stack-developer-2091101"
                   },
                   {
-                      "title":  "Senior QA Engineer",
-                      "provider":  "Lemon.io",
-                      "location":  "Global",
-                      "place":  "Europe",
-                      "mode":  "Remote",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://remotive.com/remote-jobs/qa/senior-qa-engineer-2091100"
-                  },
-                  {
                       "title":  "Senior DevOps Engineer",
                       "provider":  "Lemon.io",
                       "location":  "Global",
@@ -150,16 +280,6 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "See official posting",
                       "url":  "https://remotive.com/remote-jobs/devops/senior-devops-engineer-2091099"
-                  },
-                  {
-                      "title":  "Content Reviewer - English US",
-                      "provider":  "TELUS Digital",
-                      "location":  "Global",
-                      "place":  "USA",
-                      "mode":  "Remote",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://remotive.com/remote-jobs/all-others/content-reviewer-english-us-2091105"
                   },
                   {
                       "title":  "Senior Golang Developer",
@@ -212,54 +332,54 @@ window.JOBS_DATA = {
                       "url":  "https://remotive.com/remote-jobs/marketing/head-of-marketing-communications-2091068"
                   },
                   {
-                      "title":  "Social Media \u0026 Content Manager (m/w/d)",
-                      "provider":  "Neolymp",
+                      "title":  "Social Media \u0026 KI-Automation Manager (m/w/d) - 100% Remote, Vollzeit | Start: ab sofort",
+                      "provider":  "Endo Health GmbH",
                       "location":  "Global",
-                      "place":  "Berlin",
+                      "place":  "Chemnitz",
                       "mode":  "Remote",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.com/jobs/companies/neolymp/social-media-content-manager-berlin-447133"
+                      "url":  "https://www.arbeitnow.com/jobs/companies/endo-health-gmbh/social-media-ki-automation-manager-100-remote-vollzeit-start-ab-sofort-chemnitz-238743"
                   },
                   {
-                      "title":  "Freelance IT Support Specialist / IT-Techniker (m/w/d) - 1st \u0026 2nd Level | Onsite | Rollout",
-                      "provider":  "Nexgate IT GmbH",
+                      "title":  "Außendienstmechaniker / Servicemechaniker (m/w/d)",
+                      "provider":  "BM-Tech GmbH",
                       "location":  "Global",
-                      "place":  "Bad Homburg",
+                      "place":  "Birkenheide",
                       "mode":  "Remote",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.com/jobs/companies/nexgate-it-gmbh/freelance-it-support-specialist-it-techniker-1st-2nd-level-onsite-rollout-bad-homburg-167169"
+                      "url":  "https://www.arbeitnow.com/jobs/companies/bm-tech-gmbh/aussendienstmechaniker-servicemechaniker-birkenheide-244206"
                   },
                   {
-                      "title":  "Founders Associate (m/w/d)",
-                      "provider":  "Start To Finish Consulting GmbH",
+                      "title":  "Werkstundent:in im eCommerce Content Management (m/w/d)",
+                      "provider":  "Käsmayr GmbH",
                       "location":  "Global",
-                      "place":  "Hamburg",
+                      "place":  "Walldorf",
                       "mode":  "Remote",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.com/jobs/companies/start-to-finish-consulting-gmbh/founders-associate-hamburg-270287"
+                      "url":  "https://www.arbeitnow.com/jobs/companies/kasmayr-gmbh/werkstundentin-im-ecommerce-content-management-walldorf-266952"
                   },
                   {
-                      "title":  "SAP DRC / KSeF Expert (m/f/d) (Ref.Nr.: 47725)",
-                      "provider":  "Wavestone Germany AG",
+                      "title":  "Senior DevOps / Platform Engineer, AI Infrastructure (m/f/x)",
+                      "provider":  "MAIA",
                       "location":  "Global",
-                      "place":  "Munich",
+                      "place":  "Leipzig",
                       "mode":  "Remote",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.com/jobs/companies/wavestone-germany-ag/sap-drc-ksef-expert-refnr-47725-munich-396136"
+                      "url":  "https://www.arbeitnow.com/jobs/companies/maia/senior-devops-platform-engineer-ai-infrastructure-leipzig-223621"
                   },
                   {
-                      "title":  "Video Cutter (Editor-Social Ads) (m/w/d)",
-                      "provider":  "Creative Dreams",
+                      "title":  "CE Marking Consultant, Industry Expert and AI Pioneer (Freelance/Part-time, Germany)",
+                      "provider":  "CE=SCAN",
                       "location":  "Global",
-                      "place":  "Düsseldorf",
+                      "place":  "Heidelberg",
                       "mode":  "Remote",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.com/jobs/companies/creative-dreams/video-cutter-editor-social-ads-dusseldorf-340012"
+                      "url":  "https://www.arbeitnow.com/jobs/companies/cescan/ce-marking-consultant-industry-expert-and-ai-pioneer-freelance-part-time-germany-heidelberg-499568"
                   },
                   {
                       "title":  "Sales Account Executive - Cybersecurity",
@@ -270,16 +390,6 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "See official posting",
                       "url":  "https://www.arbeitnow.fr/jobs/companies/crowdsec/remote-sales-account-executive-cybersecurity-montrouge-375022"
-                  },
-                  {
-                      "title":  "Associate Director, Integrated Marketing - Pilotage Stratégique du Marché France",
-                      "provider":  "Inautalent",
-                      "location":  "Global",
-                      "place":  "France",
-                      "mode":  "Remote",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://www.arbeitnow.fr/jobs/companies/inautalent/remote-associate-director-integrated-marketing-pilotage-strategique-du-marche-france-340399"
                   },
                   {
                       "title":  "Junior Payroll Assistant",
@@ -350,16 +460,6 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "See official posting",
                       "url":  "https://remoteOK.com/remote-jobs/remote-engineering-manager-tlm-platform-harper-1137380"
-                  },
-                  {
-                      "title":  "Senior Communications Officer Strategic Communications",
-                      "provider":  "GiveWell",
-                      "location":  "Global",
-                      "place":  "United States",
-                      "mode":  "Remote",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://remoteOK.com/remote-jobs/remote-senior-communications-officer-strategic-communications-givewell-1137379"
                   },
                   {
                       "title":  "Senior People \u0026 Talent Operations Partner",
@@ -612,16 +712,6 @@ window.JOBS_DATA = {
                       "url":  "https://remoteOK.com/remote-jobs/remote-team-lead-education-chaos-1136949"
                   },
                   {
-                      "title":  "Digital Workplace \u0026 Automation Specialist",
-                      "provider":  "Dreem Health",
-                      "location":  "Global",
-                      "place":  "United States",
-                      "mode":  "Remote",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://remoteOK.com/remote-jobs/remote-digital-workplace-automation-specialist-dreem-health-1136948"
-                  },
-                  {
                       "title":  "Solutions Delivery Manager",
                       "provider":  "Benchling",
                       "location":  "Global",
@@ -772,16 +862,6 @@ window.JOBS_DATA = {
                       "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4970823101"
                   },
                   {
-                      "title":  "Finance Treasury Accountant - Jumia (Full-Time)",
-                      "provider":  "Jumia",
-                      "location":  "Global",
-                      "place":  "Egypt",
-                      "mode":  "Onsite",
-                      "opening":  "Open now",
-                      "deadline":  "See official posting",
-                      "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4958599101"
-                  },
-                  {
                       "title":  "Head of Fulfillment - Jumia (Full Time)",
                       "provider":  "Jumia",
                       "location":  "Global",
@@ -790,6 +870,16 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "See official posting",
                       "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4970763101"
+                  },
+                  {
+                      "title":  "Inbound Team Lead - Jumia (Full Time)",
+                      "provider":  "Jumia",
+                      "location":  "Global",
+                      "place":  "Egypt",
+                      "mode":  "Onsite",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4969413101"
                   },
                   {
                       "title":  "CS Sales Team Lead - Jumia (Full Time)",
@@ -802,14 +892,14 @@ window.JOBS_DATA = {
                       "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4942794101"
                   },
                   {
-                      "title":  "Designer - Jumia (Full Time)",
+                      "title":  "Finance Treasury Accountant - Jumia (Full-Time)",
                       "provider":  "Jumia",
                       "location":  "Global",
-                      "place":  "Senegal",
+                      "place":  "Egypt",
                       "mode":  "Onsite",
                       "opening":  "Open now",
                       "deadline":  "See official posting",
-                      "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4969880101"
+                      "url":  "https://job-boards.eu.greenhouse.io/jumia/jobs/4958599101"
                   },
                   {
                       "title":  "Key Account Manager (TV) - Jumia (Full Time)",
@@ -980,6 +1070,716 @@ window.JOBS_DATA = {
                       "opening":  "Open now",
                       "deadline":  "See official posting",
                       "url":  "https://job-boards.eu.greenhouse.io/moniepoint/jobs/4923301101"
+                  },
+                  {
+                      "title":  "Chief Technology Officer",
+                      "provider":  "Toptal",
+                      "location":  "Global",
+                      "place":  "LATAM,  Canada,  Europe",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/153308-chief-technology-officer-3"
+                  },
+                  {
+                      "title":  "SecOps Engineer I",
+                      "provider":  "LivePerson",
+                      "location":  "Global",
+                      "place":  "Bulgaria",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/153310-secops-engineer-i"
+                  },
+                  {
+                      "title":  "Pre-Sales Solutions Architect, LATAM",
+                      "provider":  "Planet Labs Inc.",
+                      "location":  "Global",
+                      "place":  "LATAM",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/149157-pre-sales-solutions-architect-latam"
+                  },
+                  {
+                      "title":  "Agentic AI Technical Mentor - Independent Contractor (US Canada, Europe, MENA, APAC)",
+                      "provider":  "Udacity",
+                      "location":  "Global",
+                      "place":  "APAC,  Canada,  Europe,  USA",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150763-agentic-ai-technical-mentor-independent-contractor-us-canada-europe-mena-india-apac-timezones"
+                  },
+                  {
+                      "title":  "Associate (CPA/SMMM)",
+                      "provider":  "Manay CPA Inc.",
+                      "location":  "Global",
+                      "place":  "Türkiye",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150821-associate-cpa-smmm"
+                  },
+                  {
+                      "title":  "AI Technical Mentor - Independent Contractor (US Canada, Europe, MENA, APAC)",
+                      "provider":  "Udacity",
+                      "location":  "Global",
+                      "place":  "APAC,  EMEA,  Canada,  Europe,  USA",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150767-ai-technical-mentor-independent-contractor-us-canada-europe-mena-india-apac-timezones"
+                  },
+                  {
+                      "title":  "Director of Engineering, Leverage",
+                      "provider":  "Fleetio",
+                      "location":  "Global",
+                      "place":  "Canada,  Mexico,  USA",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150772-director-of-engineering-leverage"
+                  },
+                  {
+                      "title":  "Design Engineer, Brand",
+                      "provider":  "infisical",
+                      "location":  "Global",
+                      "place":  "Brazil,  Canada,  USA",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150758-design-engineer-brand"
+                  },
+                  {
+                      "title":  "Business Development Manager",
+                      "provider":  "Thoughtworks",
+                      "location":  "Global",
+                      "place":  "Singapore",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150754-business-development-manager"
+                  },
+                  {
+                      "title":  "(Senior) Product Director, Local Growth",
+                      "provider":  "OKX",
+                      "location":  "Global",
+                      "place":  "LATAM",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150798-senior-product-director-local-growth"
+                  },
+                  {
+                      "title":  "Product Designer – Content Solutions",
+                      "provider":  "Fueled",
+                      "location":  "Global",
+                      "place":  "LATAM",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150781-product-designer-content-solutions"
+                  },
+                  {
+                      "title":  "Contract Senior Content Designer",
+                      "provider":  "Fueled",
+                      "location":  "Global",
+                      "place":  "LATAM,  Canada,  USA",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150779-contract-senior-content-designer"
+                  },
+                  {
+                      "title":  "Art Director",
+                      "provider":  "Fresh Prints",
+                      "location":  "Global",
+                      "place":  "Philippines",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150790-art-director"
+                  },
+                  {
+                      "title":  "Account-Based Marketing Manager",
+                      "provider":  "Fresh Prints",
+                      "location":  "Global",
+                      "place":  "Argentina,  Brazil,  Philippines",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://jobicy.com/jobs/150787-account-based-marketing-manager"
+                  },
+                  {
+                      "title":  "Senior Software Engineer",
+                      "provider":  "AccuLynx",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/acculynx-senior-software-engineer"
+                  },
+                  {
+                      "title":  "Senior Data Engineer – AWS Data Lake \u0026 Pipeline Architecture",
+                      "provider":  "Toptal",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/toptal-senior-data-engineer-aws-data-lake-pipeline-architecture"
+                  },
+                  {
+                      "title":  "Senior Fullstack Developer (React.js / Node.js)",
+                      "provider":  "Proxify AB",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/proxify-ab-senior-fullstack-developer-react-js-node-js-4"
+                  },
+                  {
+                      "title":  "Data Scientist II, ML Infrastructure",
+                      "provider":  "Pinterest",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/pinterest-data-scientist-ii-ml-infrastructure"
+                  },
+                  {
+                      "title":  "Data Scientist II, Infrastructure",
+                      "provider":  "Pinterest",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/pinterest-data-scientist-ii-infrastructure"
+                  },
+                  {
+                      "title":  "Solutions Architect -Spanish Speaking",
+                      "provider":  "Fin",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/fin-solutions-architect-spanish-speaking"
+                  },
+                  {
+                      "title":  "Power Platform Solutions Architect",
+                      "provider":  "Toptal",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/toptal-power-platform-solutions-architect"
+                  },
+                  {
+                      "title":  "Senior Systems Engineer (Identity and Access)",
+                      "provider":  "Flexport",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/flexport-senior-systems-engineer-identity-and-access"
+                  },
+                  {
+                      "title":  "Commercial Account Manager",
+                      "provider":  "Salesloft",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/salesloft-commercial-account-manager"
+                  },
+                  {
+                      "title":  "Senior .NET Full-stack Developer",
+                      "provider":  "Lemon.io",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/lemon-io-senior-net-full-stack-developer-1"
+                  },
+                  {
+                      "title":  "Senior Java \u0026 React Developer",
+                      "provider":  "Lemon.io",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/lemon-io-senior-java-react-developer"
+                  },
+                  {
+                      "title":  "Director of Production Engineering",
+                      "provider":  "Legion",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/legion-director-of-production-engineering"
+                  },
+                  {
+                      "title":  "Chief Architect",
+                      "provider":  "Legion",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/legion-chief-architect"
+                  },
+                  {
+                      "title":  "Lead Developer — Rebuild, Modernize, \u0026 Scale (Social Good SaaS, Remote)",
+                      "provider":  "Track it Forward",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/track-it-forward-lead-developer-rebuild-modernize-scale-social-good-saas-remote"
+                  },
+                  {
+                      "title":  "Senior React Native Developer",
+                      "provider":  "Lemon.io",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/lemon-io-senior-react-native-developer-1"
+                  },
+                  {
+                      "title":  "Content Designer II, Personalization",
+                      "provider":  "Pinterest",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/pinterest-content-designer-ii-personalization"
+                  },
+                  {
+                      "title":  "iGaming UI/UX Designer",
+                      "provider":  "Ondeckglobal",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ondeckglobal-igaming-ui-ux-designer"
+                  },
+                  {
+                      "title":  "Course Director: UX, UI, and AI",
+                      "provider":  "IxDF - Interaction Design Foundation",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ixdf-interaction-design-foundation-course-director-ux-ui-and-ai"
+                  },
+                  {
+                      "title":  "Education Designer: UX, UI, and AI",
+                      "provider":  "IxDF - Interaction Design Foundation",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ixdf-interaction-design-foundation-education-designer-ux-ui-and-ai"
+                  },
+                  {
+                      "title":  "Course Writer and Editor: UX, UI, and AI",
+                      "provider":  "IxDF - Interaction Design Foundation",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ixdf-interaction-design-foundation-course-writer-and-editor-ux-ui-and-ai"
+                  },
+                  {
+                      "title":  "Engineering Manager, Experimentation",
+                      "provider":  "LaunchDarkly",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/launchdarkly-engineering-manager-experimentation"
+                  },
+                  {
+                      "title":  "Senior Product Designer",
+                      "provider":  "Ingenious.build",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ingenious-build-senior-product-designer"
+                  },
+                  {
+                      "title":  "Graphic Design instructor - Project Based",
+                      "provider":  "Ischool",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/ischool-graphic-design-instructor-project-based"
+                  },
+                  {
+                      "title":  "Product Designer",
+                      "provider":  "Thatch",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/thatch-product-designer"
+                  },
+                  {
+                      "title":  "Precast Design Engineer",
+                      "provider":  "Fisher Associates, P.e., L.s., L.a., D.",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/fisher-associates-p-e-l-s-l-a-d-precast-design-engineer"
+                  },
+                  {
+                      "title":  "Staff Brand Designer",
+                      "provider":  "Webflow",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/webflow-staff-brand-designer"
+                  },
+                  {
+                      "title":  "Head of Design",
+                      "provider":  "garden3d",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/garden3d-head-of-design"
+                  },
+                  {
+                      "title":  "Business Insurance Account Executive",
+                      "provider":  "Gusto, Inc.",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/gusto-inc-business-insurance-account-executive"
+                  },
+                  {
+                      "title":  "Commercial Loan Broker",
+                      "provider":  "ROK Financial",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/rok-financial-commercial-loan-broker"
+                  },
+                  {
+                      "title":  "Affiliate Business Development Manager, CIS",
+                      "provider":  "OKX",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/okx-affiliate-business-development-manager-cis"
+                  },
+                  {
+                      "title":  "Affiliate Business Development Manager",
+                      "provider":  "OKX",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/okx-affiliate-business-development-manager"
+                  },
+                  {
+                      "title":  "Account Executive, Commercial (Pittsburgh)",
+                      "provider":  "Everpure",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/everpure-account-executive-commercial-pittsburgh"
+                  },
+                  {
+                      "title":  "Account Executive, Commercial (Alaska)",
+                      "provider":  "Everpure",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/everpure-account-executive-commercial-alaska"
+                  },
+                  {
+                      "title":  "Developer Relations Engineer - UK",
+                      "provider":  "Storyblok",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/storyblok-developer-relations-engineer-uk"
+                  },
+                  {
+                      "title":  "Business Development Representative - UK\u0026I",
+                      "provider":  "Storyblok",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/storyblok-business-development-representative-uk-i"
+                  },
+                  {
+                      "title":  "Account Executive - Federal",
+                      "provider":  "Celonis",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/celonis-account-executive-federal"
+                  },
+                  {
+                      "title":  "Account Executive - CPG",
+                      "provider":  "Celonis",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/celonis-account-executive-cpg"
+                  },
+                  {
+                      "title":  "Business Development Representative - Japan (Remote)",
+                      "provider":  "Dropbox",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/dropbox-business-development-representative-japan-remote"
+                  },
+                  {
+                      "title":  "Referral Partner for @BudgetsByTammy on TikTok - 25% Commission",
+                      "provider":  "Budgets by Tammy",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/budgets-by-tammy-referral-partner-for-budgetsbytammy-on-tiktok-25-commission"
+                  },
+                  {
+                      "title":  "Head of Marketing",
+                      "provider":  "OnTheGoSystems",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/onthegosystems-head-of-marketing"
+                  },
+                  {
+                      "title":  "Account Executive 3 - DACH",
+                      "provider":  "Wrike",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/wrike-account-executive-3-dach"
+                  },
+                  {
+                      "title":  "Project Manager",
+                      "provider":  "UTTR",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/uttr-project-manager"
+                  },
+                  {
+                      "title":  "Werkstudent:in im Headhunting",
+                      "provider":  "Recruitment Circle GmbH",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/recruitment-circle-gmbh-werkstudent-in-im-headhunting"
+                  },
+                  {
+                      "title":  "Head of Operations @ Koast.ai",
+                      "provider":  "Koast.ai",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/koast-ai-head-of-operations-koast-ai"
+                  },
+                  {
+                      "title":  "Accounting Manager, Tokenized Equities",
+                      "provider":  "Coinbase",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/coinbase-accounting-manager-tokenized-equities"
+                  },
+                  {
+                      "title":  "Actuarial Analyst",
+                      "provider":  "Clover Health",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/clover-health-actuarial-analyst"
+                  },
+                  {
+                      "title":  "Accountant, Cyprus",
+                      "provider":  "Coinbase",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/coinbase-accountant-cyprus"
+                  },
+                  {
+                      "title":  "Advertising Operations Manager",
+                      "provider":  "Discord",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/discord-advertising-operations-manager"
+                  },
+                  {
+                      "title":  "Genesys Platform Program Lead",
+                      "provider":  "Chime Financial, Inc",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/chime-financial-inc-genesys-platform-program-lead"
+                  },
+                  {
+                      "title":  "Tax Preparer (US)",
+                      "provider":  "Profitable Painter CPA PLLC",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/profitable-painter-cpa-pllc-tax-preparer-us"
+                  },
+                  {
+                      "title":  "Senior Tax Preparer/Reviewer",
+                      "provider":  "Profitable Painter CPA PLLC",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/profitable-painter-cpa-pllc-senior-tax-preparer-reviewer"
+                  },
+                  {
+                      "title":  "Senior Manager, Global Equity",
+                      "provider":  "Faire",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/faire-senior-manager-global-equity"
+                  },
+                  {
+                      "title":  "Senior Product Designer Mobile",
+                      "provider":  "Mercury",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/mercury-senior-product-designer-mobile"
+                  },
+                  {
+                      "title":  "Graphic Design Assistant",
+                      "provider":  "Blue Whale Lending Llc.",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/blue-whale-lending-llc-graphic-design-assistant"
+                  },
+                  {
+                      "title":  "Associate Product Manager (Remote)",
+                      "provider":  "Lifecheq",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/lifecheq-associate-product-manager-remote"
+                  },
+                  {
+                      "title":  "Staff Product Designer",
+                      "provider":  "Rho",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/rho-staff-product-designer"
+                  },
+                  {
+                      "title":  "Senior Product Manager, Payments",
+                      "provider":  "Versapay",
+                      "location":  "Global",
+                      "place":  "Remote / worldwide",
+                      "mode":  "Remote",
+                      "opening":  "Open now",
+                      "deadline":  "See official posting",
+                      "url":  "https://weworkremotely.com/remote-jobs/versapay-senior-product-manager-payments"
                   }
               ]
 };

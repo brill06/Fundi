@@ -40,10 +40,14 @@ function detectLevelIntent(message) {
 function detectIntents(message) {
   const m = message.toLowerCase();
   const wantsScholarships = /scholarship|fellowship|phd|master|msc|bursary|academic|research degree|study/.test(m);
-  const wantsJobs = /\bjob|work|career|employ|role|hire|hiring\b/.test(m);
-  const wantsGrants = /grant|funding|fund\b|cbo|ngo|nonprofit|non-profit|project fund|community fund/.test(m);
+  const wantsJobs = /\bjob|work|career|employ|role|hire|hiring|task|gig|annotat|label(l)?ing\b/.test(m);
+  const wantsGrants = /grant|funding|fund\b|cbo|ngo|nonprofit|non-profit|project fund|community fund|small org|startup/.test(m);
   if (!wantsScholarships && !wantsJobs && !wantsGrants) return { scholarships: true, jobs: true, grants: true };
   return { scholarships: wantsScholarships, jobs: wantsJobs, grants: wantsGrants };
+}
+
+function detectAiTaskIntent(message) {
+  return /\bai (task|training|data)|data (annotation|labeling|labelling)|\bannotat|\brlhf\b|remote (micro)?task|crowd(work|task)/i.test(message);
 }
 
 function wordsMatch(a, b) {
@@ -72,18 +76,35 @@ function rankScholarships(tokens, levelIntent, limit) {
   return scored.slice(0, limit).map(s => s.item);
 }
 
-function rankJobs(tokens, limit) {
-  const scored = jobs.map(item => ({ item, score: scoreItem(tokens, `${item.title} ${item.provider} ${item.place} ${item.mode}`) }))
-    .filter(s => s.score > 0);
+const AI_TASK_PROVIDERS = new Set(['Sama', 'Appen', 'Toloka', 'Clickworker', 'Remotasks']);
+
+function rankJobs(tokens, message, limit) {
+  const wantsAiTasks = detectAiTaskIntent(message);
+  const scored = jobs.map(item => {
+    let score = scoreItem(tokens, `${item.title} ${item.provider} ${item.place} ${item.mode}`);
+    if (wantsAiTasks && AI_TASK_PROVIDERS.has(item.provider)) score += 5;
+    return { item, score };
+  }).filter(s => s.score > 0);
   scored.sort((a, b) => b.score - a.score);
   return scored.slice(0, limit).map(s => s.item);
 }
 
+function isNegated(message, keywordPattern) {
+  // Cheap negation check: "not for an organisation" shouldn't count as an org signal.
+  const re = new RegExp(`\\b(not|no|isn'?t|instead of)\\b[^.,;!?]{0,20}(${keywordPattern})`, 'i');
+  return re.test(message);
+}
+
 function rankGrants(tokens, message, limit) {
   const wantsResearch = /research/i.test(message);
+  const wantsPersonal = /\b(personal|individual|myself|freelance)\b/i.test(message);
+  const orgPattern = "\\bcbo\\b|ngo|nonprofit|non-profit|small org|startup|organi[sz]ation|community group";
+  const wantsOrg = new RegExp(orgPattern, 'i').test(message) && !isNegated(message, orgPattern);
   const scored = grants.map(item => {
     let score = scoreItem(tokens, `${item.title} ${item.provider} ${item.place} ${item.audience}`);
-    if (wantsResearch && item.audience === 'Researchers') score += 3;
+    if (wantsResearch && item.audience === 'Research') score += 3;
+    if (wantsPersonal && item.audience === 'Personal') score += 3;
+    if (wantsOrg && item.audience === 'CBOs & Small Orgs') score += 3;
     return { item, score };
   }).filter(s => s.score > 0);
   scored.sort((a, b) => b.score - a.score);
@@ -100,13 +121,13 @@ function buildReply(message) {
   const intents = detectIntents(message);
 
   const scholarshipMatches = intents.scholarships ? rankScholarships(tokens, levelIntent, 4) : [];
-  const jobMatches = intents.jobs ? rankJobs(tokens, 4) : [];
+  const jobMatches = intents.jobs ? rankJobs(tokens, message, 4) : [];
   const grantMatches = intents.grants ? rankGrants(tokens, message, 4) : [];
 
   const totalMatches = scholarshipMatches.length + jobMatches.length + grantMatches.length;
 
   if (totalMatches === 0) {
-    return `<p>I couldn't find a close match for that in the current listings. Try naming your field of study, current level (e.g. "finishing a Masters"), and whether you want a scholarship, a job or funding — or browse <a href="scholarships.html">Scholarships</a>, <a href="jobs.html">Jobs</a> and <a href="grants.html">Grants</a> directly.</p>`;
+    return `<p>I couldn't find a close match for that in the current listings (all open to Kenyan applicants). Try naming your field of study, current level (e.g. "finishing a Masters"), and whether you want a scholarship, a job (including remote AI data-work tasks), or funding (personal, research, or for a CBO/small org) — or browse <a href="scholarships.html">Scholarships</a>, <a href="jobs.html">Jobs</a> and <a href="grants.html">Grants</a> directly.</p>`;
   }
 
   let html = `<p>Here's what looks closest to that, from the live listings:</p>`;
@@ -158,4 +179,4 @@ chatSuggestions.querySelectorAll('.chip').forEach(chip => {
   chip.addEventListener('click', () => handleSend(chip.textContent));
 });
 
-addMessage(`<p>Tell me about your field, your current level of study, and what you're after — a scholarship, a job, or funding — and I'll shortlist matches from the live listings.</p>`, 'fundi');
+addMessage(`<p>Tell me about your field, your current level of study, and what you're after — a scholarship, a job (remote AI data-work tasks included), or funding (personal, research, or for a CBO/small org) — and I'll shortlist matches from the live listings, all open to Kenyan applicants.</p>`, 'fundi');

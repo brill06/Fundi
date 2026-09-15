@@ -27,7 +27,7 @@ const lastUpdated = document.querySelector('#lastUpdated');
 let audience = 'all';
 
 function updateTabCounts() {
-  const counts = { all: grants.length, 'CBOs & NGOs': 0, Researchers: 0, 'Community groups': 0, Individuals: 0, 'Organisations & individuals': 0 };
+  const counts = { all: grants.length, Personal: 0, Research: 0, 'CBOs & Small Orgs': 0 };
   grants.forEach(item => { if (counts[item.audience] !== undefined) counts[item.audience]++; });
   document.querySelectorAll('.tab').forEach(tab => {
     const span = tab.querySelector('span');

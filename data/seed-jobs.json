@@ -4,5 +4,9 @@
   {"title":"Global remote opportunities","provider":"Andela","location":"Global","place":"Remote / worldwide","mode":"Remote","opening":"Open now","deadline":"Rolling","url":"https://andela.com/careers/"},
   {"title":"Early-career and experienced roles","provider":"UN Careers","location":"Global","place":"Worldwide","mode":"Onsite","opening":"Open now","deadline":"Varies by role","url":"https://careers.un.org/"},
   {"title":"Development and operations roles","provider":"World Bank Group","location":"Global","place":"Global offices + hybrid","mode":"Hybrid","opening":"Open now","deadline":"Varies by role","url":"https://www.worldbank.org/en/about/careers"},
-  {"title":"Kenya jobs across industries","provider":"BrighterMonday Kenya","location":"Kenya","place":"Kenya","mode":"Onsite","opening":"Open now","deadline":"Varies by role","url":"https://www.brightermonday.co.ke/jobs"}
+  {"title":"Kenya jobs across industries","provider":"BrighterMonday Kenya","location":"Kenya","place":"Kenya","mode":"Onsite","opening":"Open now","deadline":"Varies by role","url":"https://www.brightermonday.co.ke/jobs"},
+  {"title":"AI Data Annotation & Training Tasks","provider":"Sama","location":"Kenya","place":"Nairobi, Kenya + remote","mode":"Remote","opening":"Open now","deadline":"Rolling","url":"https://www.sama.com/careers"},
+  {"title":"AI Training Data & Crowd Tasks","provider":"Appen","location":"Global","place":"Remote / worldwide","mode":"Remote","opening":"Open now","deadline":"Rolling","url":"https://appen.com/careers/"},
+  {"title":"AI Data Labeling & Evaluation Tasks","provider":"Toloka","location":"Global","place":"Remote / worldwide","mode":"Remote","opening":"Open now","deadline":"Rolling","url":"https://toloka.ai/"},
+  {"title":"Online Microtasks & AI Data Work","provider":"Clickworker","location":"Global","place":"Remote / worldwide","mode":"Remote","opening":"Open now","deadline":"Rolling","url":"https://www.clickworker.com/"}
 ]

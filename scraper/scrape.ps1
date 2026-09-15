@@ -43,6 +43,38 @@ function Get-LocationTag([string]$text) {
   return 'Global'
 }
 
+function Test-ExcludesKenya([string]$text, [string]$place) {
+  # Everything on this site should be open to a Kenyan applicant. Sources that are
+  # already Africa/Kenya-focused (Opportunities For Africans, Youth Opportunities Hub,
+  # the Kenya feeds) don't need this - it exists for the global job-board APIs
+  # (Remotive/Arbeitnow/RemoteOK/Jobicy/WeWorkRemotely) which do carry region-locked
+  # "remote" roles. Only fires on explicit restriction language, not weak signals like
+  # timezone preference or "no visa sponsorship" (irrelevant for a remote hire).
+  $t = "$text $place"
+  if ($t -match '(?i)\b(US|U\.S\.|USA|United States) citizens? only\b') { return $true }
+  if ($t -match '(?i)\b(UK|United Kingdom|British) (citizens?|nationals?) only\b') { return $true }
+  if ($t -match '(?i)\bEU (citizens?|nationals?) only\b') { return $true }
+  if ($t -match '(?i)\bsettled status\b') { return $true }
+  if ($t -match '(?i)\b(must|required to) (be based|reside|live) in the (US|USA|United States|UK|United Kingdom)\b') { return $true }
+  if ($t -match '(?i)\b(US|USA|United States|UK|United Kingdom|Europe|EU|Canada|Australia) only\b') { return $true }
+  if ($t -match '(?i)\bdomestic (students?|applicants?|candidates?) only\b') { return $true }
+  if ($t -match '(?i)\bopen only to residents of\b') { return $true }
+  if ($t -match '(?i)\bpermanent resident(s)? of (the )?(US|USA|United States|UK|Canada|Australia)\b') { return $true }
+  return $false
+}
+
+function Test-JobPlaceRestrictsToNonKenya([string]$place) {
+  # Job APIs often state eligible regions as a short country list with no "only"
+  # wording at all (e.g. candidate_required_location: "USA", jobGeo: "Canada, Europe").
+  # If nothing broader (worldwide/global/Africa/Kenya) is named, treat a short list of
+  # specific Western countries/regions as not open to a Kenyan applicant.
+  if (-not $place) { return $false }
+  $p = $place.Trim()
+  if ($p -match '(?i)worldwide|anywhere|global|africa|kenya') { return $false }
+  $country = '(us|usa|u\.s\.|united states|uk|u\.k\.|united kingdom|canada|australia|europe|eu|germany|france|ireland|netherlands|spain|italy|new zealand)'
+  return ($p -match "(?i)^\s*(the\s+)?$country(\s*,\s*(the\s+)?$country)*\s*$")
+}
+
 function Get-DateInfo([string]$text) {
   # Extracts a deadline if the text states one; expiry itself is decided later by
   # Test-DeadlinePassed (kept separate so the real date always survives into the
@@ -82,6 +114,32 @@ function Is-RelevantGrant([string]$text) {
   return ($text -match '(?i)\bgrants?\b|funding (for|opportunity|call)|call for proposals|request for proposals|\brfp\b|seed fund|innovation fund|challenge fund|small grants?|micro-?grants?|\bcbo\b|community[- ]based organi|\bngo\b|non-?profit|civil society')
 }
 
+function Test-StalePost([string]$pubDateText, [string]$title, [int]$maxAgeMonths = 18) {
+  # Some category feeds (opportunitiesforafricans.com/category/grants/ especially) are
+  # NOT sorted by recency and can serve years-old posts as if they were current -
+  # e.g. "Ernst Mach Grants 2018/2019" with a real pubDate of December 2017. Text-based
+  # deadline extraction can't catch that (there's no "Deadline: ..." phrase to parse),
+  # so freshness has to be checked independently via the item's actual publish date.
+  if ($pubDateText) {
+    try {
+      $published = [datetime]::Parse($pubDateText)
+      if ($published -lt (Get-Date).AddMonths(-$maxAgeMonths)) { return $true }
+    } catch {}
+  }
+  # Backstop: a title naming only past years (e.g. "2018/2019", "2017/18") with nothing
+  # from the current or next application cycle is almost certainly a stale repost.
+  $years = [regex]::Matches($title, '\b20\d{2}\b') | ForEach-Object { [int]$_.Value }
+  if ($years.Count -gt 0) {
+    $thisYear = (Get-Date).Year
+    if (($years | Measure-Object -Maximum).Maximum -lt $thisYear) { return $true }
+  }
+  return $false
+}
+
+function Is-RelevantJob([string]$text) {
+  return ($text -match '(?i)vacanc|hiring|recruit|vacant\b|job opening|employment opportunit|\bwe.?re hiring\b')
+}
+
 function Is-NonOpportunityContent([string]$title) {
   # Some grant blogs (fundsforngos.org especially) publish sample/template proposal
   # write-ups as regular posts - these aren't funding calls you can actually apply to.
@@ -89,12 +147,14 @@ function Is-NonOpportunityContent([string]$title) {
 }
 
 function Get-GrantAudience([string]$text) {
+  # Three buckets: Personal (individuals), Research, and small-org / CBOs & NGOs -
+  # narrowed from a wider set of labels since a small grassroots CBO is the primary
+  # audience this page needs to serve well.
   $t = $text.ToLower()
-  if ($t -match '\bcbo\b|community[- ]based organi|\bngo\b|non-?profit|civil society') { return 'CBOs & NGOs' }
-  if ($t -match 'research(er)?s?\b|\bphd\b|academic|\buniversity\b') { return 'Researchers' }
-  if ($t -match '\bindividual|freelance|independent') { return 'Individuals' }
-  if ($t -match '\bgroup|\bcommunity|collective|network') { return 'Community groups' }
-  return 'Organisations & individuals'
+  if ($t -match 'research(er)?s?\b|\bphd\b|academic|\buniversity\b') { return 'Research' }
+  if ($t -match '\bcbo\b|community[- ]based organi|\bngo\b|non-?profit|civil society|\bgroup|\bcommunity|collective|network|organi[sz]ation') { return 'CBOs & Small Orgs' }
+  if ($t -match '\bindividual|freelance|independent') { return 'Personal' }
+  return 'CBOs & Small Orgs'
 }
 
 function Read-JsonArray([string]$path) {
@@ -105,8 +165,13 @@ function Read-JsonArray([string]$path) {
 
 function Get-RssItems([string]$url, [int]$max = 30) {
   try {
-    # Invoke-RestMethod auto-flattens RSS/Atom responses to the <item> elements directly.
+    # Invoke-RestMethod auto-flattens RSS/Atom responses to the <item> elements directly
+    # when the server declares an XML content-type; otherwise it hands back raw text.
     $resp = Invoke-RestMethod -Uri $url -TimeoutSec 20 -Headers @{ 'User-Agent' = $ua }
+    if ($resp -is [string]) {
+      Write-Warning "Not an XML feed (got HTML/text instead): $url"
+      return @()
+    }
     $items = $resp
     if ($items -isnot [System.Array]) { $items = @($items) }
     # Fallback in case a feed comes back as the raw document instead of pre-flattened items.
@@ -128,14 +193,16 @@ function Get-RssItems([string]$url, [int]$max = 30) {
 Write-Host "Fetching scholarship feeds..."
 $scholarshipFeeds = @(
   @{ name = 'Opportunities For Africans'; url = 'https://opportunitiesforafricans.com/feed/' },
-  @{ name = 'After School Africa'; url = 'https://www.afterschoolafrica.com/feed/' },
+  @{ name = 'Opportunities For Africans'; url = 'https://opportunitiesforafricans.com/category/scholarships/feed/' },
   @{ name = 'Opportunity Desk'; url = 'https://opportunitydesk.org/feed/' },
-  @{ name = 'Youth Opportunities Hub'; url = 'https://youthopportunitieshub.com/feed/' }
+  @{ name = 'Youth Opportunities Hub'; url = 'https://youthopportunitieshub.com/feed/' },
+  @{ name = 'Scholarship Corner'; url = 'https://www.scholarshipscorner.website/feed/' },
+  @{ name = 'Opportunities For Young Kenyans'; url = 'https://opportunitiesforyoungkenyans.co.ke/category/scholarships/feed/' }
 )
 
 $liveScholarships = @()
 foreach ($feed in $scholarshipFeeds) {
-  $items = Get-RssItems -url $feed.url -max 30
+  $items = Get-RssItems -url $feed.url -max 40
   Write-Host ("  {0}: {1} items" -f $feed.name, $items.Count)
   foreach ($it in $items) {
     $title = Strip-Html ([string]$it.title)
@@ -144,6 +211,8 @@ foreach ($feed in $scholarshipFeeds) {
     if (-not (Is-RelevantScholarship $combined)) { continue }
     if (Is-NonOpportunityContent $title) { continue }
     if (-not $title -or -not $it.link) { continue }
+    if (Test-StalePost ([string]$it.pubDate) $title) { continue }
+    if (Test-ExcludesKenya $combined '') { continue }
     $di = Get-DateInfo $combined
     $locTag = Get-LocationTag $combined
     $liveScholarships += [PSCustomObject]@{
@@ -173,7 +242,7 @@ $grantFeeds = @(
 
 $liveGrants = @()
 foreach ($feed in $grantFeeds) {
-  $items = Get-RssItems -url $feed.url -max 30
+  $items = Get-RssItems -url $feed.url -max 40
   Write-Host ("  {0}: {1} items" -f $feed.name, $items.Count)
   foreach ($it in $items) {
     $title = Strip-Html ([string]$it.title)
@@ -182,6 +251,8 @@ foreach ($feed in $grantFeeds) {
     if (-not (Is-RelevantGrant $combined)) { continue }
     if (Is-NonOpportunityContent $title) { continue }
     if (-not $title -or -not $it.link) { continue }
+    if (Test-StalePost ([string]$it.pubDate) $title) { continue }
+    if (Test-ExcludesKenya $combined '') { continue }
     $di = Get-DateInfo $combined
     $locTag = Get-LocationTag $combined
     $liveGrants += [PSCustomObject]@{
@@ -200,15 +271,81 @@ foreach ($feed in $grantFeeds) {
 }
 
 # ---------------------------------------------------------------------------
-# Jobs: live public job-board APIs
+# Kenya-specific mixed feed: vacancies, internships, scholarships and grants all
+# come through one feed here, so route each item by content instead of by source.
+# ---------------------------------------------------------------------------
+Write-Host "Fetching Kenya opportunities feeds..."
+$liveJobs = @()
+$kenyaMixedFeeds = @(
+  'https://opportunitiesforyoungkenyans.co.ke/feed/',
+  'https://opportunitiesforyoungkenyans.co.ke/category/internships/feed/'
+)
+foreach ($kenyaFeedUrl in $kenyaMixedFeeds) {
+try {
+  $kenyaItems = Get-RssItems -url $kenyaFeedUrl -max 40
+  Write-Host ("  {0}: {1} items" -f $kenyaFeedUrl, $kenyaItems.Count)
+  foreach ($it in $kenyaItems) {
+    $title = Strip-Html ([string]$it.title)
+    $desc = Strip-Html ([string]$it.description)
+    $combined = "$title $desc"
+    if (-not $title -or -not $it.link) { continue }
+    if (Is-NonOpportunityContent $title) { continue }
+    if (Test-StalePost ([string]$it.pubDate) $title) { continue }
+    $di = Get-DateInfo $combined
+    $locTag = Get-LocationTag $combined
+    if (Is-RelevantJob $combined) {
+      $liveJobs += [PSCustomObject]@{
+        key      = Normalize-Key $title
+        title    = $title
+        provider = 'Opportunities For Young Kenyans'
+        location = $locTag
+        place    = if ($locTag -eq 'Kenya') { 'Kenya' } else { 'Open internationally' }
+        mode     = 'Onsite'
+        opening  = 'Open now'
+        deadline = $di.deadline
+        url      = [string]$it.link
+      }
+    } elseif (Is-RelevantScholarship $combined) {
+      $liveScholarships += [PSCustomObject]@{
+        key        = Normalize-Key $title
+        title      = $title
+        provider   = 'Opportunities For Young Kenyans'
+        level      = Get-Level $combined
+        location   = $locTag
+        place      = if ($locTag -eq 'Kenya') { 'Kenya' } else { 'Open internationally' }
+        opening    = 'See official post'
+        deadline   = $di.deadline
+        dateStatus = $di.status
+        url        = [string]$it.link
+      }
+    } elseif (Is-RelevantGrant $combined) {
+      $liveGrants += [PSCustomObject]@{
+        key        = Normalize-Key $title
+        title      = $title
+        provider   = 'Opportunities For Young Kenyans'
+        audience   = Get-GrantAudience $combined
+        location   = $locTag
+        place      = if ($locTag -eq 'Kenya') { 'Kenya' } else { 'Open internationally' }
+        opening    = 'See official post'
+        deadline   = $di.deadline
+        dateStatus = $di.status
+        url        = [string]$it.link
+      }
+    }
+  }
+} catch { Write-Warning "Opportunities For Young Kenyans ($kenyaFeedUrl) failed: $($_.Exception.Message)" }
+}
+
+# ---------------------------------------------------------------------------
+# Jobs: live public job-board APIs and job boards
 # ---------------------------------------------------------------------------
 Write-Host "Fetching job sources..."
-$liveJobs = @()
 
 try {
   $remotive = Invoke-RestMethod -Uri 'https://remotive.com/api/remote-jobs?limit=60' -TimeoutSec 20 -Headers @{ 'User-Agent' = $ua }
   foreach ($j in $remotive.jobs) {
     $place = if ($j.candidate_required_location) { $j.candidate_required_location } else { 'Remote / worldwide' }
+    if ((Test-ExcludesKenya ([string]$j.title) $place) -or (Test-JobPlaceRestrictsToNonKenya $place)) { continue }
     $liveJobs += [PSCustomObject]@{
       key      = Normalize-Key "$($j.title)$($j.company_name)"
       title    = [string]$j.title
@@ -229,6 +366,7 @@ try {
   $relevant = $arbeitnow.data | Where-Object { $_.remote -eq $true -or $_.location -match '(?i)kenya|africa' } | Select-Object -First 40
   foreach ($j in $relevant) {
     $place = if ($j.location) { $j.location } else { 'Remote / worldwide' }
+    if ((Test-ExcludesKenya ([string]$j.title) $place) -or (Test-JobPlaceRestrictsToNonKenya $place)) { continue }
     $liveJobs += [PSCustomObject]@{
       key      = Normalize-Key "$($j.title)$($j.company_name)"
       title    = [string]$j.title
@@ -249,6 +387,7 @@ try {
   $jobsOnly = $remoteok | Where-Object { $_.id } | Select-Object -First 40
   foreach ($j in $jobsOnly) {
     $place = if ($j.location) { $j.location } else { 'Remote / worldwide' }
+    if ((Test-ExcludesKenya ([string]$j.position) $place) -or (Test-JobPlaceRestrictsToNonKenya $place)) { continue }
     $url = if ($j.url) { $j.url } elseif ($j.slug) { "https://remoteok.com/remote-jobs/$($j.slug)" } else { 'https://remoteok.com/' }
     $liveJobs += [PSCustomObject]@{
       key      = Normalize-Key "$($j.position)$($j.company)"
@@ -291,6 +430,53 @@ foreach ($b in $greenhouseBoards) {
   } catch { Write-Warning "Greenhouse ($($b.slug)) failed: $($_.Exception.Message)" }
 }
 
+try {
+  $jobicy = Invoke-RestMethod -Uri 'https://jobicy.com/api/v2/remote-jobs?count=50' -TimeoutSec 20 -Headers @{ 'User-Agent' = $ua }
+  foreach ($j in $jobicy.jobs) {
+    $place = if ($j.jobGeo) { $j.jobGeo } else { 'Remote / worldwide' }
+    if ((Test-ExcludesKenya ([string]$j.jobTitle) $place) -or (Test-JobPlaceRestrictsToNonKenya $place)) { continue }
+    $liveJobs += [PSCustomObject]@{
+      key      = Normalize-Key "$($j.jobTitle)$($j.companyName)"
+      title    = [string]$j.jobTitle
+      provider = [string]$j.companyName
+      location = Get-LocationTag $place
+      place    = $place
+      mode     = 'Remote'
+      opening  = 'Open now'
+      deadline = 'See official posting'
+      url      = [string]$j.url
+    }
+  }
+  Write-Host ("  Jobicy: {0} jobs" -f $jobicy.jobs.Count)
+} catch { Write-Warning "Jobicy failed: $($_.Exception.Message)" }
+
+$weWorkRemotelyCategories = @('full-stack-programming', 'design', 'sales-and-marketing', 'management-and-finance')
+foreach ($cat in $weWorkRemotelyCategories) {
+  try {
+    $items = Get-RssItems -url "https://weworkremotely.com/categories/remote-$cat-jobs.rss" -max 15
+    foreach ($it in $items) {
+      $raw = Strip-Html ([string]$it.title)
+      $parts = $raw -split ':\s*', 2
+      $provider = if ($parts.Count -eq 2) { $parts[0].Trim() } else { 'See posting' }
+      $title = if ($parts.Count -eq 2) { $parts[1].Trim() } else { $raw }
+      if (-not $title -or -not $it.link) { continue }
+      if (Test-StalePost ([string]$it.pubDate) $title 6) { continue }
+      $liveJobs += [PSCustomObject]@{
+        key      = Normalize-Key "$title$provider"
+        title    = $title
+        provider = $provider
+        location = 'Global'
+        place    = 'Remote / worldwide'
+        mode     = 'Remote'
+        opening  = 'Open now'
+        deadline = 'See official posting'
+        url      = [string]$it.link
+      }
+    }
+    Write-Host ("  WeWorkRemotely/{0}: {1} jobs" -f $cat, $items.Count)
+  } catch { Write-Warning "WeWorkRemotely ($cat) failed: $($_.Exception.Message)" }
+}
+
 # ---------------------------------------------------------------------------
 # Merge with curated seed data, dedupe, cap, and write output
 # ---------------------------------------------------------------------------
@@ -322,9 +508,9 @@ $seedScholarshipCount = (Read-JsonArray (Join-Path $dataDir 'seed-scholarships.j
 $seedJobCount = (Read-JsonArray (Join-Path $dataDir 'seed-jobs.json')).Count
 $seedGrantCount = (Read-JsonArray (Join-Path $dataDir 'seed-grants.json')).Count
 
-$finalScholarships = Merge-WithSeed (Join-Path $dataDir 'seed-scholarships.json') $liveScholarships 90
-$finalJobs = Merge-WithSeed (Join-Path $dataDir 'seed-jobs.json') $liveJobs 100
-$finalGrants = Merge-WithSeed (Join-Path $dataDir 'seed-grants.json') $liveGrants 60
+$finalScholarships = Merge-WithSeed (Join-Path $dataDir 'seed-scholarships.json') $liveScholarships 160
+$finalJobs = Merge-WithSeed (Join-Path $dataDir 'seed-jobs.json') $liveJobs 220
+$finalGrants = Merge-WithSeed (Join-Path $dataDir 'seed-grants.json') $liveGrants 100
 
 $updatedStamp = (Get-Date).ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ')
 

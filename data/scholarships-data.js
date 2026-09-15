@@ -1,5 +1,5 @@
 window.SCHOLARSHIPS_DATA = {
-    "updated":  "2026-09-15T12:43:54Z",
+    "updated":  "2026-09-15T14:21:17Z",
     "items":  [
                   {
                       "title":  "Erasmus Mundus Joint Masters",
@@ -222,6 +222,61 @@ window.SCHOLARSHIPS_DATA = {
                       "url":  "https://www.opportunitiesforafricans.com/chevening-british-library-coptic-collections-fellowship-2027-2028/"
                   },
                   {
+                      "title":  "Nordic Africa Institute’s Nordic Scholarship Programme 2027/2028 for early-career researchers (Fully Funded)",
+                      "provider":  "Opportunities For Africans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/nordic-africa-institutes-nordic-scholarship-programme-2027-2028/"
+                  },
+                  {
+                      "title":  "Commonwealth PhD Scholarships 2027/2028 for full-time doctoral study at a UK university (Fully Funded).",
+                      "provider":  "Opportunities For Africans",
+                      "level":  "PhD",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/commonwealth-phd-scholarships-2027-2028/"
+                  },
+                  {
+                      "title":  "Commonwealth Master’s Scholarships 2027/2028 for full-time Master’s study at a UK university (Fully Funded)",
+                      "provider":  "Opportunities For Africans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/commonwealth-masters-scholarships-2027-2028/"
+                  },
+                  {
+                      "title":  "The National Disaster Management Centre (NDMC) 2027 External Bursary Programme for South African students",
+                      "provider":  "Opportunities For Africans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/the-national-disaster-management-centre-ndmc-2027-external-bursary-programme-for-south-african-students/"
+                  },
+                  {
+                      "title":  "Department of Forestry, Fisheries and the Environment’s (DFFE) Bursary Programme 2027 for young South Africans.",
+                      "provider":  "Opportunities For Africans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/department-of-forestry-fisheries-and-the-environments-dffe-bursary-programme-2027-for-young-south-africans/"
+                  },
+                  {
                       "title":  "Maple Global Innovation Fellowship 2026",
                       "provider":  "Opportunity Desk",
                       "level":  "Fellowship",
@@ -330,6 +385,193 @@ window.SCHOLARSHIPS_DATA = {
                       "deadline":  "Rolling / see posting",
                       "dateStatus":  "rolling",
                       "url":  "https://youthopportunitieshub.com/garden-route-district-municipality-bursary-2027/"
+                  },
+                  {
+                      "title":  "CRG Research Fellowships 2026/27 in Spain | €700 Monthly Stipend",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Fellowship",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/crg-research-fellowships-spain/"
+                  },
+                  {
+                      "title":  "Chevening British Library Coptic Collections Fellowship in UK (Fully Funded)",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Fellowship",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/chevening-british-library-coptic-collections-fellowship/"
+                  },
+                  {
+                      "title":  "Gates Cambridge Scholarship 2027-28 in UK | Fully Funded",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/gates-cambridge-scholarship/"
+                  },
+                  {
+                      "title":  "Italy Scholarships for Pakistani Students 2027 (Bachelor’s \u0026 Master’s)",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Degree",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/italy-scholarships-for-pakistani-students/"
+                  },
+                  {
+                      "title":  "USTC Research Internship Program in China 2027 | Fully Funded Fellowship Available",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Fellowship",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/ustc-research-internship-program/"
+                  },
+                  {
+                      "title":  "Chevening Europe Defence and Security Fellowship in UK (Fully Funded)",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Fellowship",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/chevening-europe-defence-security-fellowship/"
+                  },
+                  {
+                      "title":  "Yenching Academy Scholarship in China 2027 | Fully Funded",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/yenching-academy-scholarship-in-china/"
+                  },
+                  {
+                      "title":  "CyberSafe x SANS AI Security Fellowship 2026 | Fully Funded",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Fellowship",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/cybersafe-sans-ai-security-fellowship/"
+                  },
+                  {
+                      "title":  "IRENA Youth Forum 2027 in Abu Dhabi, UAE | Fully Funded",
+                      "provider":  "Scholarship Corner",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://scholarshipscorner.website/irena-youth-forum-uae/"
+                  },
+                  {
+                      "title":  "Scholarship Opportunities Open At Garissa University",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/08/04/scholarship-opportunities-open-at-garissa-university/"
+                  },
+                  {
+                      "title":  "Scholarships Open At Tom Mboya University",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/08/04/scholarships-open-at-tom-mboya-university/"
+                  },
+                  {
+                      "title":  "Scholarship Attachment Open At KENHA",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/07/14/scholarship-attachment-open-at-kenha/"
+                  },
+                  {
+                      "title":  "Java NextGen Coffee Leaders Scholarship Programme",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/07/02/java-nextgen-coffee-leaders-scholarship-programme/"
+                  },
+                  {
+                      "title":  "Kenya National Highways Authority 2026 Scholarship Applications",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Kenya",
+                      "place":  "Kenya",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/06/30/kenya-national-highways-authority-2026-scholarship-applications/"
+                  },
+                  {
+                      "title":  "KCB Foundation Scholarships Open For Application",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/06/17/kcb-foundation-scholarships-open-for-application/"
+                  },
+                  {
+                      "title":  "2Jiajiri Vocational Training Scholarships 2026 July",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/06/17/vocational-training-scholarships-2026-july/"
+                  },
+                  {
+                      "title":  "Fully Funded Scholarship Opportunity at Kenyatta University",
+                      "provider":  "Opportunities For Young Kenyans",
+                      "level":  "Masters",
+                      "location":  "Kenya",
+                      "place":  "Kenya",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitiesforyoungkenyans.co.ke/2026/06/12/fully-funded-scholarship-opportunity-at-kenyatta-university/"
                   }
               ]
 };
