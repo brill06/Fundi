@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A source-linked job finder for Kenyan and international applicants." />
+  <title>Fundi | Job finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="scholarships.html" aria-label="Fundi home"><span class="brand-mark">F</span><span>fundi</span></a>
+      <nav class="topnav" aria-label="Primary navigation">
+        <a href="scholarships.html">Scholarships</a>
+        <a class="active" href="jobs.html">Jobs</a>
+        <a href="grants.html">Grants</a>
+        <a href="chat.html">Ask Fundi</a>
+      </nav>
+      <div class="source-pill"><span class="pulse"></span>Live sourced listings</div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>Built for bold next steps</p>
+          <h1>Your next role<br /><em>starts here.</em></h1>
+          <p class="hero-text">Kenyan and international roles pulled live from job boards, employer career pages and remote-work platforms, gathered in one calm place.</p>
+          <a class="hero-link" href="#jobs">Explore roles <span>↘</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="sun">✦</div><div class="mini-card card-top">OPEN ROLES <strong>90+</strong></div>
+          <div class="mini-card card-bottom">GLOBAL ACCESS <strong>92%</strong></div>
+          <div class="paper-plane">↗</div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Directory summary">
+        <div><strong id="resultCount">00</strong><span>open roles</span></div>
+        <div><strong>03</strong><span>work modes</span></div>
+        <div><strong>100%</strong><span>source links included</span></div>
+        <p><span class="shield">✓</span> <span id="lastUpdated">Live data refreshed automatically</span></p>
+      </section>
+
+      <section class="content-section jobs-section" id="jobs">
+        <div class="section-heading">
+          <div><p class="eyebrow">Work worth finding</p><h2>Open a new door.</h2></div>
+          <p class="section-note">Kenyan and international roles from<br />recognised employers and job boards.</p>
+        </div>
+        <div class="controls" role="search">
+          <label class="search-box"><span>⌕</span><input id="jobSearchInput" type="search" placeholder="Search roles, employers or locations" /></label>
+          <label class="select-wrap"><span class="sr-only">Job location</span><select id="jobLocationFilter"><option value="all">Kenya + global</option><option value="Kenya">Kenya-based</option><option value="Global">Open globally</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Work mode</span><select id="modeFilter"><option value="all">Any work mode</option><option value="Remote">Remote</option><option value="Hybrid">Hybrid</option><option value="Onsite">Onsite</option></select></label>
+        </div>
+        <div class="category-tabs" role="tablist" aria-label="Job work mode">
+          <button class="tab job-tab active" data-mode="all">All roles <span>00</span></button>
+          <button class="tab job-tab" data-mode="Remote">Remote <span>00</span></button>
+          <button class="tab job-tab" data-mode="Hybrid">Hybrid <span>00</span></button>
+          <button class="tab job-tab" data-mode="Onsite">Onsite <span>00</span></button>
+        </div>
+        <div class="opportunity-layout">
+          <div class="cards-grid" id="jobsGrid"></div>
+          <aside class="aside-panel coral-panel">
+            <div class="aside-icon">↗</div>
+            <p class="eyebrow">A useful habit</p>
+            <h3>Apply on the employer's own page.</h3>
+            <p>Job listings move quickly. Use these links as a starting point and verify the role, location and closing date before sharing your details.</p>
+            <a href="https://careers.un.org/" target="_blank" rel="noopener">Open UN Careers <span>↗</span></a>
+          </aside>
+        </div>
+        <p class="empty-state" id="jobsEmptyState">No jobs match those filters. Try a broader keyword or work mode.</p>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div><p class="eyebrow">Simple by design</p><h2>Less hunting.<br /><em>More applying.</em></h2></div>
+        <div class="steps"><div><b>01</b><h3>Scan the shortlist</h3><p>Use filters to get to the roles that fit your skills and location.</p></div><div><b>02</b><h3>Read the source</h3><p>Every card points to the employer's own listing or the job board that published it, never a repost.</p></div><div><b>03</b><h3>Make your move</h3><p>Tailor your application and apply directly with confidence.</p></div></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Kenyan and global learners · September 2026</span><a href="#top">Back to top ↑</a></footer>
+  </div>
+  <script src="data/jobs-data.js"></script>
+  <script src="js/jobs-app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A source-linked scholarship finder for Kenyan and international students." />
+  <title>Fundi | Scholarship finder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="scholarships.html" aria-label="Fundi home"><span class="brand-mark">F</span><span>fundi</span></a>
+      <nav class="topnav" aria-label="Primary navigation">
+        <a class="active" href="scholarships.html">Scholarships</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="grants.html">Grants</a>
+        <a href="chat.html">Ask Fundi</a>
+      </nav>
+      <div class="source-pill"><span class="pulse"></span>Live sourced listings</div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span>Built for bold next steps</p>
+          <h1>Your next chapter<br /><em>starts here.</em></h1>
+          <p class="hero-text">Scholarships and fellowships for Kenyan and global applicants, pulled live from official calls and trusted opportunity boards.</p>
+          <a class="hero-link" href="#opportunities">Explore opportunities <span>↘</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="sun">✦</div><div class="mini-card card-top">OPEN CALLS <strong>04</strong></div>
+          <div class="mini-card card-bottom">GLOBAL ACCESS <strong>92%</strong></div>
+          <div class="paper-plane">↗</div>
+        </div>
+      </section>
+
+      <section class="trust-strip" aria-label="Directory summary">
+        <div><strong id="resultCount">00</strong><span>curated opportunities</span></div>
+        <div><strong>05</strong><span>study pathways</span></div>
+        <div><strong>100%</strong><span>source links included</span></div>
+        <p><span class="shield">✓</span> <span id="lastUpdated">Live data refreshed automatically</span></p>
+      </section>
+
+      <section class="content-section" id="opportunities">
+        <div class="section-heading">
+          <div><p class="eyebrow">The shortlist</p><h2>Find your opening.</h2></div>
+          <p class="section-note">Search by programme, field or destination.<br />Always confirm dates on the source page.</p>
+        </div>
+
+        <div class="controls" role="search">
+          <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search opportunities, fields or countries" /></label>
+          <label class="select-wrap"><span class="sr-only">Study level</span><select id="levelFilter"><option value="all">All study levels</option><option value="Masters">Masters</option><option value="PhD">PhD</option><option value="Degree">Degree</option><option value="Short course">Short courses</option><option value="Fellowship">Fellowships</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Eligibility</span><select id="locationFilter"><option value="all">Kenya + global</option><option value="Kenya">Kenya-based</option><option value="Global">Open globally</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Date status</span><select id="dateFilter"><option value="all">Any date status</option><option value="open">Open now</option><option value="upcoming">Opening soon</option><option value="rolling">Rolling</option></select></label>
+        </div>
+
+        <div class="category-tabs" role="tablist" aria-label="Opportunity type">
+          <button class="tab active" data-category="all">All <span>00</span></button>
+          <button class="tab" data-category="Masters">Masters <span>00</span></button>
+          <button class="tab" data-category="PhD">PhD <span>00</span></button>
+          <button class="tab" data-category="Degree">Degree <span>00</span></button>
+          <button class="tab" data-category="Short course">Short courses <span>00</span></button>
+          <button class="tab" data-category="Fellowship">Fellowships <span>00</span></button>
+        </div>
+
+        <div class="opportunity-layout">
+          <div class="cards-grid" id="cardsGrid"></div>
+          <aside class="aside-panel">
+            <div class="aside-icon">✦</div>
+            <p class="eyebrow">A useful habit</p>
+            <h3>Make the source page your final stop.</h3>
+            <p>Deadlines, eligibility and documents can change. Fundi gives you the signal; the official organisation gives you the final word.</p>
+            <a href="https://www.daad.de/en/studying-in-germany/scholarships/epos/" target="_blank" rel="noopener">See an official listing <span>↗</span></a>
+          </aside>
+        </div>
+        <p class="empty-state" id="emptyState">No opportunities match that search. Try a broader keyword or reset a filter.</p>
+      </section>
+
+      <section class="how-section" id="how-it-works">
+        <div><p class="eyebrow">Simple by design</p><h2>Less hunting.<br /><em>More applying.</em></h2></div>
+        <div class="steps"><div><b>01</b><h3>Scan the shortlist</h3><p>Use filters to get to the opportunities that fit your level and location.</p></div><div><b>02</b><h3>Read the source</h3><p>Every card points to the official funder, university page or the opportunity board that published the call.</p></div><div><b>03</b><h3>Make your move</h3><p>Save the deadline, prepare your documents and submit with confidence.</p></div></div>
+      </section>
+    </main>
+    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Kenyan and global learners · September 2026</span><a href="#top">Back to top ↑</a></footer>
+  </div>
+  <script src="data/scholarships-data.js"></script>
+  <script src="js/scholarships-app.js"></script>
+</body>
+</html>

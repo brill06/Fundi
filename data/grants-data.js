@@ -1,0 +1,291 @@
+window.GRANTS_DATA = {
+    "updated":  "2026-09-15T12:43:54Z",
+    "items":  [
+                  {
+                      "title":  "GSMA Innovation Fund",
+                      "provider":  "GSMA",
+                      "audience":  "CBOs \u0026 NGOs",
+                      "location":  "Global",
+                      "place":  "Global, tech-for-good focus",
+                      "opening":  "Varies by call",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/gsma-innovation-fund/"
+                  },
+                  {
+                      "title":  "Segal Family Foundation Grants",
+                      "provider":  "Segal Family Foundation",
+                      "audience":  "CBOs \u0026 NGOs",
+                      "location":  "Global",
+                      "place":  "Sub-Saharan Africa",
+                      "opening":  "Rolling",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://segalfamilyfoundation.org/"
+                  },
+                  {
+                      "title":  "Amplify Change Grants",
+                      "provider":  "Amplify Change",
+                      "audience":  "CBOs \u0026 NGOs",
+                      "location":  "Global",
+                      "place":  "Africa, Asia, global South",
+                      "opening":  "Varies by call",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://amplifychange.org/grants/"
+                  },
+                  {
+                      "title":  "IDRC Research Awards \u0026 Funding",
+                      "provider":  "International Development Research Centre (IDRC)",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Global, priority to the Global South",
+                      "opening":  "Varies by call",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://idrc-crdi.ca/en/funding"
+                  },
+                  {
+                      "title":  "Wellcome Trust Grant Funding",
+                      "provider":  "Wellcome Trust",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Global",
+                      "opening":  "Varies by scheme",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://wellcome.org/grant-funding"
+                  },
+                  {
+                      "title":  "Google.org Impact Challenge",
+                      "provider":  "Google.org",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Global, tech-for-good focus",
+                      "opening":  "Varies by cycle",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://impactchallenge.withgoogle.com/"
+                  },
+                  {
+                      "title":  "Skoll Awards for Social Entrepreneurship",
+                      "provider":  "Skoll Foundation",
+                      "audience":  "Individuals",
+                      "location":  "Global",
+                      "place":  "Global",
+                      "opening":  "Varies by cycle",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://skoll.org/"
+                  },
+                  {
+                      "title":  "Co-Impact Gender Fund",
+                      "provider":  "Co-Impact",
+                      "audience":  "CBOs \u0026 NGOs",
+                      "location":  "Global",
+                      "place":  "Global South priority",
+                      "opening":  "Varies by call",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.co-impact.org/"
+                  },
+                  {
+                      "title":  "Digital Science Catalyst Grant 2026 (up to £25,000)",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/09/15/digital-science-catalyst-grant-2026/"
+                  },
+                  {
+                      "title":  "London Mathematical Society (LMS) Mathematics in Africa Grant 2026 (up to £2,000)",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/09/14/mathematics-in-africa-grant-2026/"
+                  },
+                  {
+                      "title":  "ACU Early Career Conference Grants 2026-2027",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/09/07/acu-early-career-conference-grants-2026-2027/"
+                  },
+                  {
+                      "title":  "Olympic Studies Centre PhD Students \u0026 Early Career Academics Research Grant Programme 2027",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/09/03/olympic-studies-centre-phd-students-early-career-academics-research-grant-programme-2027/"
+                  },
+                  {
+                      "title":  "94 Grants, Scholarships Fellowships and Other Opportunities Closing in September Currently Open – September 1, 2026",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/09/01/94-grants-scholarships-fellowships-and-other-opportunities-closing-in-september-currently-open-september-1-2026/"
+                  },
+                  {
+                      "title":  "AU-EU Youth Action Lab Grant 2026",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/08/25/au-eu-youth-action-lab-grant-2026/"
+                  },
+                  {
+                      "title":  "Pulitzer Center Global South Civil Society Microgrants 2026 (up to $4,000)",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "CBOs \u0026 NGOs",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/08/21/pulitzer-center-global-south-civil-society-microgrants-2026/"
+                  },
+                  {
+                      "title":  "University of Bayreuth Centre of International Excellence “Alexander von Humboldt” Short Term Grants Programme 2026 (up to €3,500)",
+                      "provider":  "Opportunity Desk",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://opportunitydesk.org/2026/08/19/university-of-bayreuth-centre-of-international-excellence-alexander-von-humboldt-short-term-grants-programme-2026/"
+                  },
+                  {
+                      "title":  "Applications open for Project Arts Grants 2027 (Ireland)",
+                      "provider":  "Funds for NGOs",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.fundsforngos.org/how-to-apply/applications-open-for-project-arts-grants-2027-ireland/"
+                  },
+                  {
+                      "title":  "Canon/Visa pour l’Image Photojournalist Grant 2024 for outstanding female photographers.",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/canon-visa-pour-limage-photojournalist-grant-2024/"
+                  },
+                  {
+                      "title":  "Association of Commonwealth Universities (ACU) Early Career Conference Grants 2024 for emerging Researchers. (GBP 2,000 grant)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/association-of-commonwealth-universities-acu-early-career-conference-grants-2024/"
+                  },
+                  {
+                      "title":  "International Women’s Media Foundation (IWMF) Reporting Grants for Women’s Stories 2018 ($5,000 USD)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/iwmf-reporting-grants-for-womens-stories-2018/"
+                  },
+                  {
+                      "title":  "Ernst Mach Grants 2018/2019 for Young Researchers to study in Austria (Funded)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Researchers",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/ernst-mach-grants-2018-2019-for-young-researchers/"
+                  },
+                  {
+                      "title":  "Mozilla Science Mini-Grants 2018 for projects on Prototyping \u0026 Community Building ($USD 5,000 grant)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Community groups",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/mozilla-science-mini-grants-2018/"
+                  },
+                  {
+                      "title":  "National Geographic Society (NGS) 2018 Buffett Award for Leadership in African Conservation ($USD 25,000 grant)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/ngs-2018-buffett-award-for-leadership-in-african-conservation/"
+                  },
+                  {
+                      "title":  "MTV Staying Alive Foundation Grant 2018/2019 for HIV prevention,sexual and reproductive health ($USD 12,000 grant)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/mtv-staying-alive-foundation-grant-2018/"
+                  },
+                  {
+                      "title":  "Aspire Coronation Trust Foundation Grants Programme 2017/18 for Non profits",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/act-foundation-grants-programme-2017-18-for-non-profits/"
+                  },
+                  {
+                      "title":  "Varkey Foundation Challenge Fund 2018 for early-stage initiatives ( US$50,000 grant)",
+                      "provider":  "Opportunities For Africans",
+                      "audience":  "Organisations \u0026 individuals",
+                      "location":  "Global",
+                      "place":  "Open internationally",
+                      "opening":  "See official post",
+                      "deadline":  "Rolling / see posting",
+                      "dateStatus":  "rolling",
+                      "url":  "https://www.opportunitiesforafricans.com/varkey-foundation-challenge-fund-2018/"
+                  }
+              ]
+};
