@@ -5,6 +5,14 @@
 #
 # Run it with:  powershell -NoProfile -ExecutionPolicy Bypass -File scraper\scrape.ps1
 # or just double-click run-scraper.bat in the project root.
+#
+# !! AS OF OCTOBER 2026, THIS SCRAPER IS NOT THE SITE'S DATA SOURCE. !!
+# The site now runs on hand-curated, profile-tagged data in data\seed-*.json (rebuilt for two
+# named users, Miss Rotich and Mr. Brian, with every link manually traced to its official source).
+# Live RSS/API sources can't be verified as "official" per listing, and don't carry the `profile`
+# tag the site's filter UI depends on. Running this script will overwrite that curated data with
+# unverified, untagged live listings — don't run it unless you intend to abandon the curated set,
+# or until Merge-WithSeed is updated to preserve `profile` tags and skip overwriting seed items.
 
 $ErrorActionPreference = 'Continue'
 $ProgressPreference = 'SilentlyContinue'

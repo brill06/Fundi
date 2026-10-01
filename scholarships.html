@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="A source-linked scholarship finder for study opportunities open to Kenyan nationals." />
+  <meta name="description" content="A source-linked scholarship, fellowship and training finder built for Miss Rotich (data/IT/coffee trading) and Mr. Brian (genetics)." />
   <title>Fundi | Scholarship finder</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,30 +20,29 @@
         <a href="grants.html">Grants</a>
         <a href="chat.html">Ask Fundi</a>
       </nav>
-      <div class="source-pill"><span class="pulse"></span>Live sourced listings</div>
+      <div class="source-pill"><span class="pulse"></span>Hand-verified, official-source listings</div>
+      <span class="saved-indicator" data-saved-indicator hidden><span class="save-star">★</span><span data-saved-count>0</span> saved</span>
     </header>
 
+    <div class="profile-bar" role="tablist" aria-label="Viewing opportunities for">
+      <span class="profile-bar-label">Viewing for</span>
+      <button class="profile-pill" data-profile="all">Everyone</button>
+      <button class="profile-pill" data-profile="rotich">Miss Rotich</button>
+      <button class="profile-pill" data-profile="brian">Mr. Brian</button>
+      <button class="profile-pill" data-profile="other">Other / FYI</button>
+    </div>
+
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span>Built for bold next steps</p>
-          <h1>Your next chapter<br /><em>starts here.</em></h1>
-          <p class="hero-text">Study scholarships and fellowships open to Kenyan nationals, pulled live from official calls and trusted opportunity boards.</p>
-          <a class="hero-link" href="#opportunities">Explore opportunities <span>↘</span></a>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-          <div class="sun">✦</div><div class="mini-card card-top">OPEN CALLS <strong>04</strong></div>
-          <div class="mini-card card-bottom">GLOBAL ACCESS <strong>92%</strong></div>
-          <div class="paper-plane">↗</div>
-        </div>
-      </section>
+      <div class="page-heading">
+        <h1>Scholarships, fellowships &amp; trainings</h1>
+        <p>Curated for <strong>Miss Rotich</strong> (data, IT and coffee/commodity trading) and <strong>Mr. Brian</strong> (genetics — human, plant and molecular). Every card links to the issuing organisation's own official page, not a repost.</p>
+      </div>
 
       <section class="trust-strip" aria-label="Directory summary">
         <div><strong id="resultCount">00</strong><span>curated opportunities</span></div>
-        <div><strong>05</strong><span>study pathways</span></div>
+        <div><strong id="profileCount" data-profile-label>Everyone</strong><span>currently viewing</span></div>
         <div><strong>100%</strong><span>source links included</span></div>
-        <p><span class="shield">✓</span> <span id="lastUpdated">Live data refreshed automatically</span></p>
+        <p><span class="shield">✓</span> <span id="lastUpdated">Hand-researched and refreshed periodically</span></p>
       </section>
 
       <section class="content-section" id="opportunities">
@@ -54,18 +53,18 @@
 
         <div class="controls" role="search">
           <label class="search-box"><span>⌕</span><input id="searchInput" type="search" placeholder="Search opportunities, fields or countries" /></label>
-          <label class="select-wrap"><span class="sr-only">Study level</span><select id="levelFilter"><option value="all">All study levels</option><option value="Masters">Masters</option><option value="PhD">PhD</option><option value="Degree">Degree</option><option value="Short course">Short courses</option><option value="Fellowship">Fellowships</option></select></label>
-          <label class="select-wrap"><span class="sr-only">Eligibility</span><select id="locationFilter"><option value="all">Kenya + global</option><option value="Kenya">Kenya-based</option><option value="Global">Open globally</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Study level</span><select id="levelFilter"><option value="all">All study levels</option><option value="Masters">Masters</option><option value="PhD">PhD</option><option value="Postdoc">Postdoc</option><option value="Fellowship">Fellowships</option><option value="Short course">Short courses</option><option value="Certification">Certifications</option></select></label>
+          <label class="select-wrap"><span class="sr-only">Eligibility</span><select id="locationFilter"><option value="all">Kenya + Africa + global</option><option value="Kenya">Kenya-based</option><option value="Africa">Africa-based</option><option value="Global">Open globally</option></select></label>
           <label class="select-wrap"><span class="sr-only">Date status</span><select id="dateFilter"><option value="all">Any date status</option><option value="open">Open now</option><option value="upcoming">Opening soon</option><option value="rolling">Rolling</option></select></label>
+          <button type="button" class="saved-toggle" id="savedToggle" aria-pressed="false">☆ Saved only</button>
         </div>
 
         <div class="category-tabs" role="tablist" aria-label="Opportunity type">
           <button class="tab active" data-category="all">All <span>00</span></button>
           <button class="tab" data-category="Masters">Masters <span>00</span></button>
-          <button class="tab" data-category="PhD">PhD <span>00</span></button>
-          <button class="tab" data-category="Degree">Degree <span>00</span></button>
-          <button class="tab" data-category="Short course">Short courses <span>00</span></button>
+          <button class="tab" data-category="PhD">PhD &amp; Postdoc <span>00</span></button>
           <button class="tab" data-category="Fellowship">Fellowships <span>00</span></button>
+          <button class="tab" data-category="Training">Courses &amp; Certs <span>00</span></button>
         </div>
 
         <div class="opportunity-layout">
@@ -83,12 +82,15 @@
 
       <section class="how-section" id="how-it-works">
         <div><p class="eyebrow">Simple by design</p><h2>Less hunting.<br /><em>More applying.</em></h2></div>
-        <div class="steps"><div><b>01</b><h3>Scan the shortlist</h3><p>Use filters to get to the opportunities that fit your level and location.</p></div><div><b>02</b><h3>Read the source</h3><p>Every card points to the official funder, university page or the opportunity board that published the call.</p></div><div><b>03</b><h3>Make your move</h3><p>Save the deadline, prepare your documents and submit with confidence.</p></div></div>
+        <div class="steps"><div><b>01</b><h3>Scan the shortlist</h3><p>Filter by level, location or date, and ☆ save anything worth a second look.</p></div><div><b>02</b><h3>Read the source</h3><p>Every card points to the official funder, university page or the opportunity board that published the call.</p></div><div><b>03</b><h3>Prep with Ask Fundi</h3><p>Need help with documents, your personal statement, CV or interview prep? <a href="chat.html">Ask Fundi</a> walks through any of it.</p></div></div>
       </section>
     </main>
-    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Kenyan and global learners · September 2026</span><a href="#top">Back to top ↑</a></footer>
+    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Miss Rotich &amp; Mr. Brian · October 2026</span><a href="#top">Back to top ↑</a></footer>
   </div>
   <script src="data/scholarships-data.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/saved.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/scholarships-app.js"></script>
 </body>
 </html>

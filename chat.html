@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Describe your background and Fundi shortlists matching scholarships, jobs and grants." />
+  <meta name="description" content="Ask Fundi, built for Miss Rotich and Mr. Brian, shortlists matching scholarships, jobs and grants from hand-verified official sources." />
   <title>Fundi | Ask Fundi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,25 +21,33 @@
         <a href="grants.html">Grants</a>
         <a class="active" href="chat.html">Ask Fundi</a>
       </nav>
-      <div class="source-pill"><span class="pulse"></span>Matched from live listings</div>
+      <div class="source-pill"><span class="pulse"></span>Matched from hand-verified listings</div>
+      <span class="saved-indicator" data-saved-indicator hidden><span class="save-star">★</span><span data-saved-count>0</span> saved</span>
     </header>
 
+    <div class="profile-bar" role="tablist" aria-label="Viewing opportunities for">
+      <span class="profile-bar-label">Viewing for</span>
+      <button class="profile-pill" data-profile="all">Everyone</button>
+      <button class="profile-pill" data-profile="rotich">Miss Rotich</button>
+      <button class="profile-pill" data-profile="brian">Mr. Brian</button>
+      <button class="profile-pill" data-profile="other">Other / FYI</button>
+    </div>
+
     <main id="top">
-      <section class="hero chat-hero">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span>Tell Fundi about you</p>
-          <h1>Not sure where<br /><em>to look?</em></h1>
-          <p class="hero-text">Describe your background — field, current level of study, what you're after — and Fundi shortlists matching scholarships, jobs (remote AI tasks included) and grants (personal, research or CBO/small-org), all open to Kenyan applicants.</p>
-        </div>
-      </section>
+      <div class="page-heading">
+        <h1>Ask Fundi</h1>
+        <p>Pick who you are above, then either describe what you're after — field, current level, study vs. work vs. funding — or ask an application question: documents needed, personal statements, CVs, recommendation letters, interview prep, proposal writing. Not sure where to start? Just say so.</p>
+      </div>
 
       <section class="content-section chat-section">
         <div class="chat-shell">
           <div class="chat-log" id="chatLog" aria-live="polite"></div>
           <div class="chat-suggestions" id="chatSuggestions">
-            <button type="button" class="chip">I'm finishing a Masters in Genetics — what PhD or research options fit me?</button>
-            <button type="button" class="chip">I run a small CBO teaching rural Kenyan kids IT and AI skills — what funding fits us?</button>
-            <button type="button" class="chip">I need remote AI data-annotation or labeling tasks I can do from Kenya.</button>
+            <button type="button" class="chip">I have a Master's in Genetics — what PhD or research options fit me?</button>
+            <button type="button" class="chip">I run Tech4Change, a CBO teaching rural Kenyan kids IT and AI skills — what funding fits us?</button>
+            <button type="button" class="chip">I'm a data analyst with a Computer Technology degree working in coffee trading — what jobs or courses fit me?</button>
+            <button type="button" class="chip">What documents do I usually need for a scholarship application?</button>
+            <button type="button" class="chip">I'm not sure where to start — too many options.</button>
           </div>
           <form class="chat-input-row" id="chatForm">
             <input id="chatInput" type="text" placeholder="Tell Fundi about your field, level and what you need…" autocomplete="off" />
@@ -49,11 +57,13 @@
         </div>
       </section>
     </main>
-    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Kenyan and global learners · September 2026</span><a href="#top">Back to top ↑</a></footer>
+    <footer><a class="brand" href="scholarships.html"><span class="brand-mark">F</span><span>fundi</span></a><span>Curated for Miss Rotich &amp; Mr. Brian · October 2026</span><a href="#top">Back to top ↑</a></footer>
   </div>
   <script src="data/scholarships-data.js"></script>
   <script src="data/jobs-data.js"></script>
   <script src="data/grants-data.js"></script>
+  <script src="js/profile.js"></script>
+  <script src="js/saved.js"></script>
   <script src="js/chat-app.js"></script>
 </body>
 </html>
